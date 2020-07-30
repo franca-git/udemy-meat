@@ -9,7 +9,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from "./about/about.component";
-
+import {RestaurantsComponent} from "./restaurants/restaurants.component";
+import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
+import {RestaurantService} from "./restaurants/restaurant/restaurant.service";
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { AboutComponent } from "./about/about.component";
     HeaderComponent,
     HomeComponent,
     AboutComponent,
+    RestaurantsComponent,
+    RestaurantComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,8 @@ import { AboutComponent } from "./about/about.component";
     RouterModule,
     RouterModule.forRoot(ROUTES),
   ],
-  providers: [],
+  providers: [RestaurantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+//Os serviços são declarados no providers
